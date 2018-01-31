@@ -1,4 +1,5 @@
 {
 	"canOpen": true,
-	"versionCode": 1
+	"versionCode": 1,
+	"upData":""
 }
