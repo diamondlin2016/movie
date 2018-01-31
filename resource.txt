@@ -1,1 +1,1 @@
-{"canOpen": false,"versionCode": 1,"upData":""}
+{"canOpen": true,"versionCode": 1,"upData":""}
