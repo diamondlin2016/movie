@@ -1,0 +1,37 @@
+<resources>
+    <string name="app_name">可乐电影</string>
+    <string name="title_home">主页</string>
+    <string name="title_column">栏目</string>
+    <string name="title_person"> 我的</string>
+    <string name="string_empty_page">Empty page</string>
+    <string name="title_search">搜索</string>
+    <string name="search">搜索真的好用，不骗你</string>
+    <string name="title_search_result">搜索结果</string>
+    <string name="text_content_synopsis">内容简介：</string>
+    <string name="text_synopsis">简介</string>
+    <string name="text_recommend">猜你喜欢</string>
+    <string name="text_no_data">暂时没有资源 请过几天再来观看</string>
+    <string name="text_choose_chapter">选集</string>
+    <string name="text_more">更多</string>
+    <string name="text_analyze_data">正在解析数据…</string>
+    <string name="title_cache">离线电影</string>
+    <string name="text_down">下载</string>
+    <string name="text_disclaimer">免责声明:app 提供的最新电视剧和电影资源均系收集于各大视频网站，本网站只提供播放服务，并不提供影片资源存储，也不参与录制、上传。若本站收录的节目无意侵犯了贵司版权，请在个人中心联系我们，我们会及时处理和回复，谢谢。</string>
+    <string name="text_cache">我的缓存</string>
+    <string name="text_chat_me">建议与反馈</string>
+    <string name="text_about_me">关于我</string>
+    <string name="text_email">邮箱：anonymous_lin@foxmail.com</string>
+    <string name="text_copy">复制</string>
+    <string name="text_wechat">微信：moco10</string>
+    <string name="text_qq">qq群：703062136</string>
+    <string name="text_version_string">Copyright@%1$d.v%2$s</string>
+
+
+    <string-array name="title_home_type">
+        <item>"电影"</item>
+        <item>"连续剧"</item>
+        <item>"综艺"</item>
+        <item>"动漫"</item>
+    </string-array>
+
+</resources>

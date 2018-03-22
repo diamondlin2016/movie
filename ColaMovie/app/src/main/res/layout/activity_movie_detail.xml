@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <!--app:player_preview_layout_id="@layout/simple_exo_preview_view"-->
+    <chuangyuan.ycj.videolibrary.widget.VideoPlayerView
+        android:id="@+id/video_view"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        app:controller_layout_id="@layout/simple_exo_playback_list_view"
+        app:hide_on_touch="false"
+        app:player_layout_id="@layout/simple_exo_view"
+        app:player_list="true"
+        app:resize_mode="fit"
+        app:show_timeout="3000"
+        app:surface_type="texture_view"
+        />
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:padding="@dimen/view_margin_normal"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/text_disclaimer"
+                    android:textColor="@color/basic_third_text"
+                    android:textSize="@dimen/text_detail"
+                    />
+
+                <Button
+                    android:layout_marginLeft="@dimen/view_margin_normal"
+                    android:layout_gravity="center"
+                    android:id="@+id/bt_down"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_down"/>
+            </LinearLayout>
+
+
+            <include layout="@layout/include_divide_line"/>
+
+
+            <FrameLayout
+                android:id="@+id/fl_choose_chapter"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/view_margin_normal"
+                android:paddingLeft="@dimen/view_margin_large"
+                android:paddingRight="@dimen/view_margin_large"
+                android:paddingTop="@dimen/view_margin_normal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_choose_chapter"
+                    android:textColor="@color/basic_primary_text"
+                    android:textSize="@dimen/text_title"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:drawableEnd="@mipmap/ic_arrows_right"
+                    android:drawablePadding="@dimen/view_margin_small"
+                    android:paddingTop="@dimen/view_margin_small"
+                    android:text="@string/text_more"
+                    android:textSize="@dimen/text_detail"/>
+
+            </FrameLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_chapter"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/view_margin_normal"
+                android:layout_marginTop="@dimen/view_margin_normal"/>
+
+            <TextView
+                android:id="@+id/tv_no_data"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/view_margin_large"
+                android:gravity="center"
+                android:paddingBottom="@dimen/view_margin_large"
+                android:text="@string/text_no_data"
+                android:textColor="@color/basic_third_text"
+                android:textSize="@dimen/text_detail"
+                android:visibility="gone"/>
+
+            <include layout="@layout/include_divide_line"/>
+
+            <RelativeLayout
+                android:id="@+id/ll_synopsis"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/view_margin_normal"
+                android:paddingLeft="@dimen/view_margin_large"
+                android:paddingRight="@dimen/view_margin_large"
+                android:paddingTop="@dimen/view_margin_normal">
+
+                <TextView
+                    android:id="@+id/tv_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/basic_primary_text"
+                    android:textSize="@dimen/text_title"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:drawableEnd="@mipmap/ic_arrows_right"
+                    android:drawablePadding="@dimen/view_margin_small"
+                    android:paddingTop="@dimen/view_margin_small"
+                    android:text="@string/text_synopsis"
+                    android:textSize="@dimen/text_detail"/>
+
+                <TextView
+                    android:id="@+id/tv_synopsis"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_name"
+                    android:layout_marginTop="@dimen/text_normal"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:textColor="@color/basic_third_text"
+                    android:textSize="@dimen/text_normal"/>
+
+            </RelativeLayout>
+
+            <include layout="@layout/include_divide_line"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/view_margin_normal"
+                android:layout_marginLeft="@dimen/view_margin_large"
+                android:layout_marginTop="@dimen/view_margin_normal"
+                android:text="@string/text_recommend"/>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_recommend"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </android.support.v7.widget.RecyclerView>
+
+        </LinearLayout>
+
+
+    </android.support.v4.widget.NestedScrollView>
+
+
+</LinearLayout>

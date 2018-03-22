@@ -1,0 +1,74 @@
+apply plugin: 'com.android.application'
+
+
+android {
+    compileSdkVersion 26
+    buildToolsVersion "26.0.3"
+    defaultConfig {
+        applicationId "com.diamond.colamovie"
+//        multiDexEnabled true
+        minSdkVersion 17
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        vectorDrawables.useSupportLibrary = true
+        ndk {
+            // 设置支持的 SO 库构架
+            abiFilters 'armeabi'// 'armeabi-v7a', 'arm64-v8a', 'x86', 'x86_64', 'mips', 'mips64'
+        }
+    }
+    signingConfigs {
+        debug {
+            storeFile file("keystore.jks")
+            storePassword "123456"
+            keyAlias 'colaMovie'
+            keyPassword "123456"
+        }
+        release {
+            storeFile file("keystore.jks")
+            storePassword "123456"
+            keyAlias 'colaMovie'
+            keyPassword "123456"
+            //setting your signing.properties
+            //first, add signing.properties to ./app/
+            //second, add property STORE_FILE, STORE_PASSWORD, KEY_ALIAS, KEY_PASSWORD
+        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            shrinkResources false
+            // 混淆文件的位置
+            signingConfig signingConfigs.release
+            proguardFiles 'proguard-rules.pro'
+            buildConfigField "boolean", "DEBUG_MODEL", "false"//是否Debug模式
+        }
+        debug {
+            signingConfig signingConfigs.release
+            buildConfigField "boolean", "DEBUG_MODEL", "false"//是否Debug模式
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile 'com.android.support:support-vector-drawable:26.+'
+    compile 'com.jakewharton:butterknife:8.4.0'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.4.0'
+    compile 'org.jsoup:jsoup:1.11.2'
+    compile 'com.github.bumptech.glide:glide:3.7.0'
+    compile 'com.ycjiang:VideoPlayModule:1.9.83'
+    //视频播放框架
+    compile 'com.github.NanoHttpd.nanohttpd:nanohttpd:master'
+    //离线缓存功能需要
+    compile 'com.karumi:dexter:4.2.0'
+    compile 'com.umeng.sdk:common:latest.integration'
+    compile 'com.umeng.sdk:analytics:latest.integration'
+    testCompile 'junit:junit:4.12'
+    implementation project(':searrchview')
+//    implementation project(':PushSDK')
+}

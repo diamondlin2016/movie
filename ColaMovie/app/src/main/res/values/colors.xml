@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--theme color-->
+    <color name="colorPrimary">#56350a</color>
+    <color name="colorPrimaryDark">#56350a</color>
+    <color name="colorAccent">#56350a</color>
+
+    <!--      text color               -->
+    <color name="basic_primary_text">#333333</color>
+    <color name="basic_secondary_text">#666666</color>
+    <color name="basic_third_text">#B4B4B4</color>
+
+    <color name="basic_divide_line">#d2d2d2</color>
+
+    <!--basic color-->
+    <color name="basic_white">#ffffff</color>
+    <color name="basic_orange">#ffffbb33</color>
+
+    <!-- transparent-->
+    <color name="bg_transparent60">#aa000000</color>
+    <color name="bg_transparent30">#44000000</color>
+
+
+    <!-- A light Holo shade of blue -->
+    <color name="holo_blue_light">#ff33b5e5</color>
+    <!-- A light Holo shade of green -->
+    <color name="holo_green_light">#ff99cc00</color>
+    <!-- A light Holo shade of red -->
+    <color name="holo_red_light">#ffff4444</color>
+    <!-- A light Holo shade of orange -->
+    <color name="holo_orange_light">#ffffbb33</color>
+
+
+</resources>

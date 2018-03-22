@@ -1,0 +1,26 @@
+<resources>
+
+    <dimen name="view_margin_small">4dp</dimen>
+    <dimen name="view_margin_normal">8dp</dimen>
+    <dimen name="view_margin_large">16dp</dimen>
+
+    <dimen name="view_corner_radius">4dp</dimen>
+
+    <dimen name="view_divide_height">1px</dimen>
+    
+    <dimen name="text_title">16sp</dimen>
+    <dimen name="text_normal">14sp</dimen>
+    <dimen name="text_detail">12sp</dimen>
+
+
+
+    <dimen name="default_radius">80dp</dimen>
+
+    <color name="default_circular_color">#4c99d9</color>
+    <color name="default_circular_progress_color">#ffffff</color>
+    <dimen name="default_circular_width">3.5dp</dimen>
+    <dimen name="edge">10dp</dimen>
+    <dimen name="default_text_size">50sp</dimen>
+
+
+</resources>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.diamond.colamovie">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+
+    <!-- 推荐的权限 -->
+    <!-- 添加如下权限，以便使用更多的第三方SDK和更精准的统计数据 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+
+    <application
+        android:name=".MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme.ToolBar">
+        <activity
+            android:name=".activity.MainActivity"
+            android:label="@string/app_name"
+            android:windowSoftInputMode="adjustNothing">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".activity.MovieDetailActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            />
+        <activity
+            android:name=".activity.SearchActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"/>
+        <activity
+            android:name=".activity.SearchResultActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"/>
+        <activity android:name=".activity.CacheActivity"/>
+        <activity
+            android:name=".activity.FullScreenActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:hardwareAccelerated="true"
+            android:launchMode="singleTop"/>
+        <activity android:name=".activity.FeedbackActivity"/>
+        <activity android:name=".activity.AboutMeActivity"/>
+
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="5a727128a40fa337ce0001c4"/>
+        <meta-data
+            android:name="UMENG_MESSAGE_SECRET"
+            android:value="2b776d53c3885d2da3b59a12014f03cc"/>
+
+        <meta-data
+            android:name="UMENG_CHANNEL"
+            android:value="Normal"/>
+
+    </application>
+
+</manifest>
